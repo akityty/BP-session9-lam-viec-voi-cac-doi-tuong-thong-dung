@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let myBirthTime = new Date(1994,4,21,23,59,59,0);
+    let thisTime = new Date();
+    let yearBirth = myBirthTime.getFullYear();
+    let monthBirth = myBirthTime.getMonth();
+    let dayBirth = myBirthTime.getDate();
+    let hourBirth = myBirthTime.getHours();
+    let minutesBirth = myBirthTime.getMinutes();
+    let secondsBirth = myBirthTime.getSeconds();
+    let millisecondsBirth = myBirthTime.getMilliseconds();
+
+    let thisYear = thisTime.getFullYear();
+    let thisMonth = thisTime.getMonth();
+    let thisDay = thisTime.getDate();
+    let thisHour = thisTime.getHours();
+    let thisMinutes = thisTime.getMinutes();
+    let thisSeconds = thisTime.getSeconds();
+    let thisMilliseconds = thisTime.getMilliseconds();
+
+    let yearLife = thisYear-yearBirth;
+    let monthLife = yearLife * 12 + thisMonth - monthBirth;
+    let dayLife = monthLife*30 + thisDay - dayBirth;
+    let hourLife = dayLife*24 + thisHour - hourBirth;
+    let minutesLife = hourLife*60 + thisMinutes - minutesBirth;
+    let secondsLife = minutesLife + thisSeconds - secondsBirth;
+    let millisecondsLife = secondsLife*1000 + thisMilliseconds - millisecondsBirth;
+
+   console.log("toi da song\n"+yearLife+ " nam \n"+
+                               monthLife+" thang \n"+
+                               dayLife+ " ngay \n"+
+                               hourLife+ " gio \n"+
+                               minutesLife+" phut \n"+
+                               secondsLife+" giay \n"+
+                               millisecondsLife+" mili giay \n");
+// ---------------------------------------------------------------------------------------------------------------------
+    let randomNumber1 = Math.random();
+    let randomNumber2 = Math.floor(Math.random()*10);
+    let randomNumber3 = Math.floor(Math.random()*100);
+    let randomNumber4 = Math.floor((Math.random()*50)+50);
+    let maxNumber = (Math.max(5,7,2,9));
+    let luyThua53 = Math.pow(2,53);
+    let dienTichHinhTrongBanKinh5 = Math.PI*5*5;
+    // -----------------------------------------------------------------------------------------------------------------
+    let str = "toi yeu ngon ngu lap trinh javascript";
+    console.log(str.match(/a/g).length);
+    let spitString = str.split(" ");
+    console.log(spitString.length);
+    console.log(str.replace("javascript","typescript"));
+</script>
+</body>
+</html>
